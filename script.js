@@ -10,7 +10,7 @@ function Employee(name, age, jobTitle) {
 
 	super();
 	jobGreet(){
-		console.log(`Hello, my name is ${name}, I am ${age} years old, and my job title is ${jobTitle}.")
+		console.log(`Hello, my name is ${name}, I am ${age} years old, and my job title is ${jobTitle}.`)
 	}
 	
 }
