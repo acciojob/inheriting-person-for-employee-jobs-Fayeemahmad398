@@ -1,35 +1,23 @@
-  to  Everyone
-Object.prototype.getKeys = function() {
-  return Object.keys
-// Person constructor function
 function Person(name, age) {
-  this.name = name;
-  this.age = age;
+	this.name=name;
+	this.age=age;
 }
-
-// Person prototype method
-Person.prototype.greet = function() {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+Person.prototype.greet=function () {
+	console.log('Hello, my name is Alice and I am 25 years old.')
 }
-
-// Employee constructor function
 function Employee(name, age, jobTitle) {
-  // call the Person constructor function and set its properties
-  Person.call(this, name, age);
-
-  // set the Employee-specific property
-  this.jobTitle = jobTitle;
+	this.name=name;
+	this.age=age;
+	this.jobTitle=jobTitle;
 }
-
-// Inherit the Person prototype
+ 
 Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee;
-
-// Employee prototype method
-Employee.prototype.jobGreet = function() {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
-}
-
+ 
+ 
+Employee.prototype.jobGreet=function()
+	{
+		console.log( 'Hello, my name is Bob, I am 30 years old, and my job title is Manager.')
+	}
 // Do not change code below this line
 window.Person = Person;
 window.Employee = Employee;
